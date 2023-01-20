@@ -32,7 +32,7 @@ th{
   border-top: 1px solid #CCC;
   border-bottom: 1px solid #CCC;
   background-color: #E5E7EB;
-  color: #374151;
+  color: grey;
   padding: 8px 16px;
 }
 thead{
@@ -40,18 +40,18 @@ thead{
 }
 tr:nth-child(2n) td{
   background-color: #E5E7EB;
-  color: #1F2937;
+  color: blue;
 }
-tabletitle{
+.tabletitle{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   font-size: 18px;
   margin-bottom: 8px;
 }
-tabeltitle a {
+.tabeltitle a {
   display:block;
-  background-color: #115E59;
+  background-color: blue;
   color:white;
   border-radius: 8px;
   padding: 8px 16px;
@@ -70,7 +70,7 @@ tabeltitle a {
 .actions a{
   text-decoration: none;
   font-weight: bold;
-  color:#115E59;
+  color: black;
 }
 .form-buttons{
   display: flex;
@@ -79,22 +79,22 @@ tabeltitle a {
 .button{
   text-decoration: none;
   font-weight: bold;
-  color: #115E59;
+  color: black;
   padding: 8px 16px;
   border-radius: 8px;
   border: none;
 }
 .button.submit {
-  background-color: #115E59;
+  background-color: black;
   color: white;
 }
 
 .button.delete{
-  color:#B91C1C;
+  color:orange;
   background-color: #FEE2E2;
 }
 .button.cancel{
-  color: #1E293B;
+  color: black;
 }
 .employee-form{
   background-color: white;

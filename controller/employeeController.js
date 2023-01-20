@@ -20,7 +20,8 @@ module.exports.renderAddEmployeeForm = function(req, res){
                 state:states[0],
                 zip:'',
                 phonenumber:'',
-                yearhired:''
+                yearhired:'',
+                salary:'',
             },
             jobtitles,
             stateslist:states
@@ -28,7 +29,7 @@ module.exports.renderAddEmployeeForm = function(req, res){
 }
 
 module.exports.addEmployee = async function(req, res){
-    await Employee.create(
+    const person=await Employee.create(
         {
             firstname:req.body.firstname,
             lastname:req.body.lastname,
@@ -39,9 +40,11 @@ module.exports.addEmployee = async function(req, res){
             state:req.body.state,
             zip:req.body.zip,
             phonenumber:req.body.phonenumber,
-            yearhired:req.body.yearhired
+            yearhired:req.body.yearhired,
+            salary:req.body.salary,
         },
     );
+    console.log(person)
     res.redirect('/');
 }
 
@@ -55,7 +58,7 @@ module.exports.renderUpdateForm = async function(req, res){
 }
 
 module.exports.updateEmployee = async function(req, res){
-    await Employee.update(
+    const person =await Employee.update(
         {
         firstname:req.body.firstname,
         lastname:req.body.lastname,
@@ -66,13 +69,15 @@ module.exports.updateEmployee = async function(req, res){
         state:req.body.state,
         zip:req.body.zip,
         phonenumber:req.body.phonenumber,
-        yearhired:req.body.yearhired
+        yearhired:req.body.yearhired,
+        salary:req.body.salary
         },
         {
         where: {
             id: req.params.id
         }
     });
+    console.log(person);
     res.redirect('/');
 }
 
